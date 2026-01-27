@@ -1,5 +1,27 @@
 # Changelog
 
+## [0.129.0](https://github.com/tambo-ai/tambo/compare/web-v0.128.0...web-v0.129.0) (2026-01-27)
+
+
+### Features
+
+* **web:** add docs and llms links to meta ([#1759](https://github.com/tambo-ai/tambo/issues/1759)) ([5182027](https://github.com/tambo-ai/tambo/commit/5182027718b2b87efc39f68b02ce12f7cfcacc71))
+
+
+### Miscellaneous Chores
+
+* **deps-dev:** bump @testing-library/react from 16.3.1 to 16.3.2 in the testing group ([#1929](https://github.com/tambo-ai/tambo/issues/1929)) ([7ff6aa6](https://github.com/tambo-ai/tambo/commit/7ff6aa6c42aefc9d009bc8aaacbd511cd19ed3af))
+* **deps:** bump framer-motion from 12.23.26 to 12.29.0 ([#1936](https://github.com/tambo-ai/tambo/issues/1936)) ([59fca7a](https://github.com/tambo-ai/tambo/commit/59fca7ad50454e6a2845de0dec5a782c8be65b3e))
+* **deps:** bump the sentry group with 3 updates ([#1933](https://github.com/tambo-ai/tambo/issues/1933)) ([5bec612](https://github.com/tambo-ai/tambo/commit/5bec6126512078ee8f8bff2845d1660f73357d88))
+* **deps:** bump the small-safe-packages group with 10 updates ([#1932](https://github.com/tambo-ai/tambo/issues/1932)) ([66f8ee8](https://github.com/tambo-ai/tambo/commit/66f8ee83adbcdb8c64d5c85159bc6574d4166f7b))
+* **deps:** bump the tiptap group with 9 updates ([#1935](https://github.com/tambo-ai/tambo/issues/1935)) ([a041ae4](https://github.com/tambo-ai/tambo/commit/a041ae4599a389dc581c07f49769c85707b42201))
+* **test:** bump coverage thresholds (2026-01-26) ([#1918](https://github.com/tambo-ai/tambo/issues/1918)) ([3173795](https://github.com/tambo-ai/tambo/commit/3173795837258192e183144b3c5c48c901990d26))
+
+
+### Documentation
+
+* **react-sdk:** remove dependency on zod ([#1850](https://github.com/tambo-ai/tambo/issues/1850)) ([18dcc3a](https://github.com/tambo-ai/tambo/commit/18dcc3af02e147c2259f7e9dfd0aee800c03d97a))
+
 ## [0.128.0](https://github.com/tambo-ai/tambo/compare/web-v0.127.0...web-v0.128.0) (2026-01-22)
 
 
