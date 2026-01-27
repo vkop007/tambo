@@ -9,7 +9,7 @@ import {
   ValidateNested,
 } from "class-validator";
 import { Type } from "class-transformer";
-import { V1MessageDto } from "./message.dto";
+import { V1InputMessageDto, V1MessageDto } from "./message.dto";
 import { V1RunStatus } from "@tambo-ai-cloud/core";
 
 /**
@@ -52,13 +52,6 @@ export class V1ThreadDto {
   })
   @IsString()
   id!: string;
-
-  @ApiProperty({
-    description: "Project this thread belongs to",
-    example: "prj_xyz789",
-  })
-  @IsString()
-  projectId!: string;
 
   @ApiProperty({
     description: "Optional context key for thread organization",
@@ -205,6 +198,17 @@ export class V1CreateThreadDto {
   @IsOptional()
   @IsObject()
   metadata?: Record<string, unknown>;
+
+  @ApiProperty({
+    description: "Initial messages to seed the thread with",
+    type: [V1InputMessageDto],
+    required: false,
+  })
+  @IsOptional()
+  @IsArray()
+  @ValidateNested({ each: true })
+  @Type(() => V1InputMessageDto)
+  initialMessages?: V1InputMessageDto[];
 }
 
 /**

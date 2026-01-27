@@ -1,3 +1,4 @@
+import { PostHogIdentify } from "@/components/analytics/posthog-identify";
 import { PreloadResources } from "@/components/preload-resources";
 import { Schema } from "@/components/schema";
 import { TailwindIndicator } from "@/components/tailwind-indicator";
@@ -55,6 +56,10 @@ export default async function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const docsUrl = "https://docs.tambo.co";
+  const llmsUrl = "https://docs.tambo.co/llms.txt";
+  const llmsFullUrl = "https://docs.tambo.co/llms-full.txt";
+
   // Generate schema for the website and organization
   const websiteSchema = generateWebsiteSchema();
   const organizationSchema = generateOrganizationSchema();
@@ -70,8 +75,11 @@ export default async function RootLayout({
     >
       <head>
         <PreloadResources />
+        <link rel="help" href={docsUrl} />
+        <link rel="alternate" type="text/plain" href={llmsUrl} />
+        <link rel="alternate" type="text/plain" href={llmsFullUrl} />
       </head>
-      <TamboProviderWrapper>
+      <TamboProviderWrapper userId={session?.user?.id}>
         <Suspense>
           <PostHogPageview />
         </Suspense>
@@ -92,6 +100,7 @@ export default async function RootLayout({
                 forcedTheme="light"
               >
                 <NextAuthProvider session={session}>
+                  <PostHogIdentify />
                   <MessageThreadPanelProvider>
                     <div className="flex h-screen overflow-hidden w-full">
                       <main className="flex-1 min-w-0 overflow-auto snap-y snap-proximity">

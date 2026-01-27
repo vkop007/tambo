@@ -41,8 +41,12 @@ export const V1ErrorCodes = {
   COMPONENT_NOT_FOUND: "COMPONENT_NOT_FOUND",
   /** Invalid tool call ID provided */
   INVALID_TOOL_CALL: "INVALID_TOOL_CALL",
+  /** Invalid or missing tool result */
+  INVALID_TOOL_RESULT: "INVALID_TOOL_RESULT",
   /** Invalid previousRunId provided */
   INVALID_PREVIOUS_RUN: "INVALID_PREVIOUS_RUN",
+  /** Invalid JSON Patch operations */
+  INVALID_JSON_PATCH: "INVALID_JSON_PATCH",
   /** Request validation failed */
   VALIDATION_ERROR: "VALIDATION_ERROR",
   /** Internal server error */
@@ -83,8 +87,16 @@ const errorMetadata: Record<V1ErrorCode, { title: string; status: number }> = {
     title: "Invalid Tool Call",
     status: 400,
   },
+  [V1ErrorCodes.INVALID_TOOL_RESULT]: {
+    title: "Invalid Tool Result",
+    status: 400,
+  },
   [V1ErrorCodes.INVALID_PREVIOUS_RUN]: {
     title: "Invalid Previous Run",
+    status: 400,
+  },
+  [V1ErrorCodes.INVALID_JSON_PATCH]: {
+    title: "Invalid JSON Patch",
     status: 400,
   },
   [V1ErrorCodes.VALIDATION_ERROR]: {

@@ -1,5 +1,75 @@
 # Changelog
 
+## [0.128.0](https://github.com/tambo-ai/tambo/compare/web-v0.127.0...web-v0.128.0) (2026-01-22)
+
+
+### Features
+
+* **web:** add context key support for Tambo user isolation ([#1894](https://github.com/tambo-ai/tambo/issues/1894)) ([c3c05ce](https://github.com/tambo-ai/tambo/commit/c3c05ce533c36e21af946f58f7becf6ab7548c76))
+
+
+### Miscellaneous Chores
+
+* **react:** bump to new @tambo-ai/typescript-sdk ([#1864](https://github.com/tambo-ai/tambo/issues/1864)) ([7643415](https://github.com/tambo-ai/tambo/commit/76434157aeaa2f4fb6501702403262025614931b))
+* **sdk:** Bump again: get SSE streaming types ([#1870](https://github.com/tambo-ai/tambo/issues/1870)) ([e6fbb44](https://github.com/tambo-ai/tambo/commit/e6fbb4432bc3ba07fe8b660206a1c514ffb98ea8))
+
+
+### Code Refactoring
+
+* **ui-registry:** migrate consumers to centralized component registry ([#1872](https://github.com/tambo-ai/tambo/issues/1872)) ([1a74aeb](https://github.com/tambo-ai/tambo/commit/1a74aeb1255e612a651cfa303cd972c7eb8df115))
+
+## [0.127.0](https://github.com/tambo-ai/tambo/compare/web-v0.126.0...web-v0.127.0) (2026-01-21)
+
+
+### Features
+
+* **analytics:** PostHog cross-subdomain tracking (Phase 1) ([#1842](https://github.com/tambo-ai/tambo/issues/1842)) ([ed80eb0](https://github.com/tambo-ai/tambo/commit/ed80eb0c6a6d15a4be844ff895f983788a6d9fba))
+
+
+### Bug Fixes
+
+* correct OAuth callback URL construction for MCP server authoriza… [#1837](https://github.com/tambo-ai/tambo/issues/1837) ([#1839](https://github.com/tambo-ai/tambo/issues/1839)) ([cb7299c](https://github.com/tambo-ai/tambo/commit/cb7299c6ba5c34082ebb8a28c839c77a7581cf3a))
+* **web:** add guard for SLACK_OAUTH_TOKEN in callSlackAPI ([#1841](https://github.com/tambo-ai/tambo/issues/1841)) ([facf620](https://github.com/tambo-ai/tambo/commit/facf620a94ecd424c2c586c5678877f3577c9bab))
+* **web:** prevent optional env vars from failing validation when empty ([#1821](https://github.com/tambo-ai/tambo/issues/1821)) ([b95735b](https://github.com/tambo-ai/tambo/commit/b95735bd1b4611402bb131bd90253fa88c77d9ec))
+
+
+### Miscellaneous Chores
+
+* **deps:** bump resend from 6.6.0 to 6.7.0 ([#1836](https://github.com/tambo-ai/tambo/issues/1836)) ([0410860](https://github.com/tambo-ai/tambo/commit/0410860a01fe73e51cb403f0b261f9cf760c987b))
+* **deps:** bump the sentry group with 3 updates ([#1832](https://github.com/tambo-ai/tambo/issues/1832)) ([bdbee36](https://github.com/tambo-ai/tambo/commit/bdbee3643f2cc90a5094365545e939633422a962))
+* **deps:** bump the small-safe-packages group with 8 updates ([#1831](https://github.com/tambo-ai/tambo/issues/1831)) ([a5965b4](https://github.com/tambo-ai/tambo/commit/a5965b4f9d1cf502eaf185cc8b1e26a93f847de0))
+* **test:** bump coverage thresholds (2026-01-19) ([#1822](https://github.com/tambo-ai/tambo/issues/1822)) ([acf34a5](https://github.com/tambo-ai/tambo/commit/acf34a58b3cda7d8ed0b1313998ecf53e8463ad3))
+
+## [0.126.0](https://github.com/tambo-ai/tambo/compare/web-v0.125.0...web-v0.126.0) (2026-01-16)
+
+
+### Features
+
+* **api:** implement v1 API phase 1 - foundation & schema ([#1767](https://github.com/tambo-ai/tambo/issues/1767)) ([e4dad06](https://github.com/tambo-ai/tambo/commit/e4dad061f22d2b6378846949beac1449f8c8b5c4))
+* **react-sdk:** Add streaming hint to enable tool streaming on the client ([#1685](https://github.com/tambo-ai/tambo/issues/1685)) ([c38f046](https://github.com/tambo-ai/tambo/commit/c38f046fda8a5ba2a3287ceab65ca10432be48fa))
+* **web,cli:** redirect auth from tambo.co to app.tambo.co ([#1791](https://github.com/tambo-ai/tambo/issues/1791)) ([2d2b975](https://github.com/tambo-ai/tambo/commit/2d2b9750b6b1346b08949e2925ac1af774b9ea9c))
+* **web:** add API key callout on project page ([#1755](https://github.com/tambo-ai/tambo/issues/1755)) ([d771f84](https://github.com/tambo-ai/tambo/commit/d771f84b0b315f729cbc45b90257ec6d50346f3f))
+* **web:** add Docs link to dashboard header ([#1757](https://github.com/tambo-ai/tambo/issues/1757)) ([0396733](https://github.com/tambo-ai/tambo/commit/03967335d289f215581e0b77c6a1e8c46fdd02e7))
+* **web:** make project names clickable in projects table ([#1754](https://github.com/tambo-ai/tambo/issues/1754)) ([3e992ab](https://github.com/tambo-ai/tambo/commit/3e992ab6b25158c7dd1dfe4a2b2e764d952a7a76))
+
+
+### Bug Fixes
+
+* **web:** avoid 'Invalid Date' for project createdAt ([#1768](https://github.com/tambo-ai/tambo/issues/1768)) ([77f2265](https://github.com/tambo-ai/tambo/commit/77f226500102a76f869fc2dba786e246ec9d9292))
+
+
+### Miscellaneous Chores
+
+* **deps-dev:** bump @types/node from 22.19.1 to 22.19.5 ([#1746](https://github.com/tambo-ai/tambo/issues/1746)) ([aa0ca84](https://github.com/tambo-ai/tambo/commit/aa0ca84eb3e5cc582290e6aa0df6672f4b404969))
+* **deps:** bump the small-safe-packages group with 5 updates ([#1742](https://github.com/tambo-ai/tambo/issues/1742)) ([2056c5c](https://github.com/tambo-ai/tambo/commit/2056c5c424310b103ec0a93bedc59f774c532a5b))
+* **deps:** bump the tiptap group with 8 updates ([#1743](https://github.com/tambo-ai/tambo/issues/1743)) ([f3059ae](https://github.com/tambo-ai/tambo/commit/f3059ae231a4d19f799e6513c561695073c0e311))
+* **web:** shorten starter calls banner copy ([#1756](https://github.com/tambo-ai/tambo/issues/1756)) ([4f26716](https://github.com/tambo-ai/tambo/commit/4f267169f67b98132fed79df6681b06e84cfb6a3))
+
+
+### Code Refactoring
+
+* **cli:** remove unused children prop from MessageThreadPanel ([#1750](https://github.com/tambo-ai/tambo/issues/1750)) ([b6f0e34](https://github.com/tambo-ai/tambo/commit/b6f0e348c2c1174cecc01834e85125e0b2558b55))
+
 ## [0.125.0](https://github.com/tambo-ai/tambo/compare/web-v0.124.0...web-v0.125.0) (2026-01-07)
 
 

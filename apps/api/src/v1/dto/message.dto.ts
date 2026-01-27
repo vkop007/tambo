@@ -2,20 +2,19 @@ import { ApiProperty, ApiSchema } from "@nestjs/swagger";
 import {
   IsString,
   IsOptional,
-  ValidateNested,
-  IsArray,
   IsNotEmpty,
   IsIn,
   IsObject,
 } from "class-validator";
-import { Type } from "class-transformer";
 import {
   V1ContentBlock,
   V1TextContentDto,
   V1ResourceContentDto,
   V1ToolResultContentDto,
-  v1ContentBlockDiscriminator,
+  V1ToolUseContentDto,
+  V1ComponentContentDto,
 } from "./content.dto";
+import { ApiDiscriminatedUnion } from "../../common/decorators/api-discriminated-union.decorator";
 
 /**
  * Message role following OpenAI/Anthropic conventions.
@@ -43,13 +42,17 @@ export class V1MessageDto {
   @IsIn(["user", "assistant", "system"])
   role!: V1MessageRole;
 
-  @ApiProperty({
+  @ApiDiscriminatedUnion({
+    types: [
+      { dto: V1TextContentDto, name: "text" },
+      { dto: V1ResourceContentDto, name: "resource" },
+      { dto: V1ToolUseContentDto, name: "tool_use" },
+      { dto: V1ToolResultContentDto, name: "tool_result" },
+      { dto: V1ComponentContentDto, name: "component" },
+    ],
     description: "Content blocks in this message",
-    type: [Object],
+    isArray: true,
   })
-  @IsArray()
-  @ValidateNested({ each: true })
-  @Type(() => Object, v1ContentBlockDiscriminator)
   content!: V1ContentBlock[];
 
   @ApiProperty({
@@ -93,26 +96,20 @@ export class V1InputMessageDto {
   @IsIn(["user"])
   role!: "user";
 
-  @ApiProperty({
+  @ApiDiscriminatedUnion({
+    types: [
+      { dto: V1TextContentDto, name: "text" },
+      { dto: V1ResourceContentDto, name: "resource" },
+      { dto: V1ToolResultContentDto, name: "tool_result" },
+    ],
     description: "Content blocks (text, resource, or tool_result)",
-    type: [Object],
-  })
-  @IsArray()
-  @IsNotEmpty()
-  @ValidateNested({ each: true })
-  @Type(() => Object, {
-    ...v1ContentBlockDiscriminator,
-    // Override to only allow input content types
-    discriminator: {
-      property: "type",
-      subTypes: [
-        { value: V1TextContentDto, name: "text" },
-        { value: V1ResourceContentDto, name: "resource" },
-        { value: V1ToolResultContentDto, name: "tool_result" },
-      ],
+    isArray: true,
+    additionalOptions: {
+      // Mark as required and non-empty
+      required: true,
     },
-    keepDiscriminatorProperty: true,
   })
+  @IsNotEmpty()
   content!: V1InputContent[];
 
   @ApiProperty({

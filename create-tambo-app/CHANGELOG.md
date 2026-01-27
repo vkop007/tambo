@@ -1,5 +1,19 @@
 # Changelog
 
+## [0.2.2](https://github.com/tambo-ai/tambo/compare/create-tambo-app-v0.2.1...create-tambo-app-v0.2.2) (2026-01-26)
+
+
+### Bug Fixes
+
+* **create-tambo-app:** use cross-spawn for Windows compatibility ([#1905](https://github.com/tambo-ai/tambo/issues/1905)) ([b3568a1](https://github.com/tambo-ai/tambo/commit/b3568a16eea921fba2ae6b74e015291e9ab34cb5))
+
+## [0.2.1](https://github.com/tambo-ai/tambo/compare/create-tambo-app-v0.2.0...create-tambo-app-v0.2.1) (2026-01-21)
+
+
+### Miscellaneous Chores
+
+* **deps-dev:** bump the eslint group with 4 updates ([#1829](https://github.com/tambo-ai/tambo/issues/1829)) ([eab7100](https://github.com/tambo-ai/tambo/commit/eab7100dc3c4e4e63a68c76dade3fb8189a9a734))
+
 ## [0.2.0](https://github.com/tambo-ai/tambo/compare/create-tambo-app-v0.1.18...create-tambo-app-v0.2.0) (2025-11-20)
 
 

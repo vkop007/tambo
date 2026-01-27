@@ -213,20 +213,18 @@ const tools: TamboTool[] = [
   {
     name: "getWeather",
     description: "Fetches weather for a location",
-    tool: async (location: string) =>
-      fetch(`/api/weather?q=${encodeURIComponent(location)}`).then((r) =>
+    tool: async (params: { location: string }) =>
+      fetch(`/api/weather?q=${encodeURIComponent(params.location)}`).then((r) =>
         r.json(),
       ),
-    toolSchema: z
-      .function()
-      .args(z.string())
-      .returns(
-        z.object({
-          temperature: z.number(),
-          condition: z.string(),
-          location: z.string(),
-        }),
-      ),
+    inputSchema: z.object({
+      location: z.string(),
+    }),
+    outputSchema: z.object({
+      temperature: z.number(),
+      condition: z.string(),
+      location: z.string(),
+    }),
   },
 ];
 
@@ -268,7 +266,7 @@ Docs: [additional context](https://docs.tambo.co/concepts/additional-context), [
 
 ### Supported LLM Providers
 
-OpenAI, Anthropic, Google Gemini, Mistral, Groq, and any OpenAI-compatible provider. [Full list](https://docs.tambo.co/models). Missing one? [Let us know](https://github.com/tambo-ai/tambo/issues).
+OpenAI, Anthropic, Cerebras, Google Gemini, Mistral, and any OpenAI-compatible provider. [Full list](https://docs.tambo.co/models). Missing one? [Let us know](https://github.com/tambo-ai/tambo/issues).
 
 ## How Tambo Compares
 

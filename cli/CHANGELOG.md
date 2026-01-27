@@ -1,5 +1,41 @@
 # Changelog
 
+## [0.48.0](https://github.com/tambo-ai/tambo/compare/tambo-v0.47.0...tambo-v0.48.0) (2026-01-21)
+
+
+### Features
+
+* **ui-registry:** create centralized component registry package ([#1793](https://github.com/tambo-ai/tambo/issues/1793)) ([ac0dd75](https://github.com/tambo-ai/tambo/commit/ac0dd75a35cc2f37f0635cba48b6983c544c70a4))
+
+
+### Bug Fixes
+
+* **cli:** allow git clone in non-interactive mode ([#1811](https://github.com/tambo-ai/tambo/issues/1811)) ([68035e2](https://github.com/tambo-ai/tambo/commit/68035e27becd6669bfca1c8e77e0cc374ae2dda2))
+
+
+### Miscellaneous Chores
+
+* **test:** bump coverage thresholds (2026-01-19) ([#1822](https://github.com/tambo-ai/tambo/issues/1822)) ([acf34a5](https://github.com/tambo-ai/tambo/commit/acf34a58b3cda7d8ed0b1313998ecf53e8463ad3))
+
+## [0.47.0](https://github.com/tambo-ai/tambo/compare/tambo-v0.46.1...tambo-v0.47.0) (2026-01-16)
+
+
+### Features
+
+* **ui:** add aria-labels to dictation button ([#1715](https://github.com/tambo-ai/tambo/issues/1715)) ([001e75b](https://github.com/tambo-ai/tambo/commit/001e75b03a969b228621c7b3f8c51a8952116954))
+* **web,cli:** redirect auth from tambo.co to app.tambo.co ([#1791](https://github.com/tambo-ai/tambo/issues/1791)) ([2d2b975](https://github.com/tambo-ai/tambo/commit/2d2b9750b6b1346b08949e2925ac1af774b9ea9c))
+
+
+### Bug Fixes
+
+* **cli:** add GenerationStage enum to components and Jest mock ([#1728](https://github.com/tambo-ai/tambo/issues/1728)) ([5b0eaf4](https://github.com/tambo-ai/tambo/commit/5b0eaf48ccf0cc80ff426457ca1b6121da4b6dad))
+* **message-input:** clean up paste handling ([#1732](https://github.com/tambo-ai/tambo/issues/1732)) ([29fd5c9](https://github.com/tambo-ai/tambo/commit/29fd5c9df7e7cb9ff4b3166a7f6194a0a88e228b))
+
+
+### Miscellaneous Chores
+
+* **deps:** bump diff from 8.0.2 to 8.0.3 ([#1780](https://github.com/tambo-ai/tambo/issues/1780)) ([86f03a5](https://github.com/tambo-ai/tambo/commit/86f03a500044ca24b64539e2f475ce6a511106f2))
+
 ## [0.46.1](https://github.com/tambo-ai/tambo/compare/tambo-v0.46.0...tambo-v0.46.1) (2026-01-14)
 
 

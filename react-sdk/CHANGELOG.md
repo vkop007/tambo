@@ -1,5 +1,69 @@
 # Changelog
 
+## [0.70.0](https://github.com/tambo-ai/tambo/compare/react-v0.69.1...react-v0.70.0) (2026-01-26)
+
+
+### Features
+
+* **react-sdk:** Added React SDK dev workflow scripts (dev:sdk, build:sdk) [#1880](https://github.com/tambo-ai/tambo/issues/1880) ([#1886](https://github.com/tambo-ai/tambo/issues/1886)) ([85f49ce](https://github.com/tambo-ai/tambo/commit/85f49ceb41118a8a9e3b757b92d2ef8105adfd87))
+* **react-sdk:** Implement rollback logic for optimistic UI updates ([#1843](https://github.com/tambo-ai/tambo/issues/1843)) ([5916cfc](https://github.com/tambo-ai/tambo/commit/5916cfc426289b204c9df47782561ee9cd52a19c))
+* **react-sdk:** Phase 0 & 1 - v1 types and structure ([#1890](https://github.com/tambo-ai/tambo/issues/1890)) ([77aa301](https://github.com/tambo-ai/tambo/commit/77aa301c3db58efea2cd8777cb385e7c4db1e1a8))
+
+
+### Bug Fixes
+
+* **react-sdk:** add @modelcontextprotocol/sdk to dependencies ([#1907](https://github.com/tambo-ai/tambo/issues/1907)) ([c2271c8](https://github.com/tambo-ai/tambo/commit/c2271c892f48755484e90c60ae6b61fc9109a502))
+
+
+### Miscellaneous Chores
+
+* **react:** bump to new @tambo-ai/typescript-sdk ([#1864](https://github.com/tambo-ai/tambo/issues/1864)) ([7643415](https://github.com/tambo-ai/tambo/commit/76434157aeaa2f4fb6501702403262025614931b))
+* **sdk:** Bump again: get SSE streaming types ([#1870](https://github.com/tambo-ai/tambo/issues/1870)) ([e6fbb44](https://github.com/tambo-ai/tambo/commit/e6fbb4432bc3ba07fe8b660206a1c514ffb98ea8))
+
+
+### Documentation
+
+* **react-sdk:** remove dependency on zod ([#1850](https://github.com/tambo-ai/tambo/issues/1850)) ([18dcc3a](https://github.com/tambo-ai/tambo/commit/18dcc3af02e147c2259f7e9dfd0aee800c03d97a))
+
+## [0.69.1](https://github.com/tambo-ai/tambo/compare/react-v0.69.0...react-v0.69.1) (2026-01-16)
+
+
+### Bug Fixes
+
+* Allow multiple messages in response stream ([#1801](https://github.com/tambo-ai/tambo/issues/1801)) ([2bd74cf](https://github.com/tambo-ai/tambo/commit/2bd74cf201499c62273e73a2aa8cc6a22f62d95b))
+
+## [0.69.0](https://github.com/tambo-ai/tambo/compare/react-v0.68.0...react-v0.69.0) (2026-01-15)
+
+
+### Features
+
+* **react-sdk:** Add streaming hint to enable tool streaming on the client ([#1685](https://github.com/tambo-ai/tambo/issues/1685)) ([c38f046](https://github.com/tambo-ai/tambo/commit/c38f046fda8a5ba2a3287ceab65ca10432be48fa))
+* **showcase/message-input:** persist user input via session storage … ([#1259](https://github.com/tambo-ai/tambo/issues/1259)) ([0130917](https://github.com/tambo-ai/tambo/commit/013091741d78dfd3ae81ea6255bba26d1fd7786b))
+
+
+### Bug Fixes
+
+* don't send initialMessages on toolresponse ([#1783](https://github.com/tambo-ai/tambo/issues/1783)) ([16cb197](https://github.com/tambo-ai/tambo/commit/16cb19798ede07625b97701ce078552d03f76e55))
+* **react-sdk:** replace any types with unknown in context helpers ([#1733](https://github.com/tambo-ai/tambo/issues/1733)) ([bfcf7cd](https://github.com/tambo-ai/tambo/commit/bfcf7cd873b387af02d9023fc000d153a7ff50fb))
+
+
+### Miscellaneous Chores
+
+* **deps-dev:** bump @types/node from 22.19.1 to 22.19.5 ([#1746](https://github.com/tambo-ai/tambo/issues/1746)) ([aa0ca84](https://github.com/tambo-ai/tambo/commit/aa0ca84eb3e5cc582290e6aa0df6672f4b404969))
+* **deps-dev:** bump the eslint group with 2 updates ([#1739](https://github.com/tambo-ai/tambo/issues/1739)) ([c9818e2](https://github.com/tambo-ai/tambo/commit/c9818e2254c8a33bd1096d82846f2a4f09961923))
+
+
+### Documentation
+
+* update all port references from 3000/3001 to new ports ([#1725](https://github.com/tambo-ai/tambo/issues/1725)) ([db075e5](https://github.com/tambo-ai/tambo/commit/db075e5cb4cc2090ee5b372518f2a39980c153a0))
+
+
+### Tests
+
+* **react-sdk:** add test for is-promise.ts ([#1731](https://github.com/tambo-ai/tambo/issues/1731)) ([8ebad70](https://github.com/tambo-ai/tambo/commit/8ebad70e75b489cb460667677550950735a642d6))
+* **react-sdk:** add tests for resource-validators.ts ([#1748](https://github.com/tambo-ai/tambo/issues/1748)) ([02f0471](https://github.com/tambo-ai/tambo/commit/02f04711f0aa6144e8ceae204c3ca19f142f353e))
+* **react-sdk:** add tests for validate-component-name.ts-1657 ([#1764](https://github.com/tambo-ai/tambo/issues/1764)) ([c543064](https://github.com/tambo-ai/tambo/commit/c543064c9988a377107124d7cde931f57165b7cf))
+
 ## [0.68.0](https://github.com/tambo-ai/tambo/compare/react-v0.67.1...react-v0.68.0) (2025-12-18)
 
 
